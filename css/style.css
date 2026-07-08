@@ -84,7 +84,7 @@ button{font-family:inherit;cursor:pointer;}
 /* ── Logo banner ─────────────────────────────────────────── */
 .logo-banner{background:var(--white);padding:2.4rem var(--gutter) 2rem;}
 .logo-banner .container{display:flex;justify-content:center;}
-.logo-banner img{max-height:160px;width:auto;}
+.logo-banner img{max-height:220px;width:auto;}
 .logo-banner-placeholder{font-family:var(--font-display);font-size:1.1rem;color:var(--pool-teal-light);border:2px dashed var(--line);padding:2rem 3rem;border-radius:var(--radius);}
 
 /* ── Wave transition out of white into oxford-blue ──────── */
