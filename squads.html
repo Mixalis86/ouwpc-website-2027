@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
-  /* Blues row above Seconds row, each pair side by side */
   .squad-tier { margin-bottom: 1.4rem; }
   .squad-tier:last-child { margin-bottom: 0; }
   .squad-tier-label { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--pool-teal-light); margin-bottom: .8rem; }
@@ -56,7 +55,7 @@
         <div class="squad-photo-grid">
           <a href="squads-m1.html" class="squad-photo-link">
             <img src="images/team/squad-m1.jpg" alt="Men's Blues" loading="lazy"
-                 onerror="this.outerHTML='&lt;div class=&quot;squad-placeholder&quot;&gt;Add images/team/squad-m1.jpg&lt;/div&gt;'">
+                 onerror="this.outerHTML='&lt;div class=&quot;squad-placeholder&quot;&gt;&lt;/div&gt;'">
             <div class="squad-photo-overlay">
               <div class="squad-tag">Blues</div>
               <h3>Men's Blues</h3>
@@ -64,7 +63,7 @@
           </a>
           <a href="squads-w1.html" class="squad-photo-link">
             <img src="images/team/squad-w1.jpg" alt="Women's Blues" loading="lazy"
-                 onerror="this.outerHTML='&lt;div class=&quot;squad-placeholder&quot;&gt;Add images/team/squad-w1.jpg&lt;/div&gt;'">
+                 onerror="this.outerHTML='&lt;div class=&quot;squad-placeholder&quot;&gt;&lt;/div&gt;'">
             <div class="squad-photo-overlay">
               <div class="squad-tag">Blues</div>
               <h3>Women's Blues</h3>
@@ -77,7 +76,7 @@
         <div class="squad-photo-grid">
           <a href="squads-m2.html" class="squad-photo-link">
             <img src="images/team/squad-m2.jpg" alt="Men's Seconds" loading="lazy"
-                 onerror="this.outerHTML='&lt;div class=&quot;squad-placeholder&quot;&gt;Add images/team/squad-m2.jpg&lt;/div&gt;'">
+                 onerror="this.outerHTML='&lt;div class=&quot;squad-placeholder&quot;&gt;&lt;/div&gt;'">
             <div class="squad-photo-overlay">
               <div class="squad-tag">Seconds</div>
               <h3>Men's Seconds</h3>
@@ -85,7 +84,7 @@
           </a>
           <a href="squads-w2.html" class="squad-photo-link">
             <img src="images/team/squad-w2.jpg" alt="Women's Seconds" loading="lazy"
-                 onerror="this.outerHTML='&lt;div class=&quot;squad-placeholder&quot;&gt;Add images/team/squad-w2.jpg&lt;/div&gt;'">
+                 onerror="this.outerHTML='&lt;div class=&quot;squad-placeholder&quot;&gt;&lt;/div&gt;'">
             <div class="squad-photo-overlay">
               <div class="squad-tag">Seconds</div>
               <h3>Women's Seconds</h3>
@@ -93,7 +92,6 @@
           </a>
         </div>
       </div>
-      <p class="upload-note">Each square pulls a photo from <code>images/team/</code> (<code>squad-m1.jpg</code>, <code>squad-w1.jpg</code>, <code>squad-m2.jpg</code>, <code>squad-w2.jpg</code>). Clicking a squad opens its own page — <code>squads-m1.html</code>, <code>squads-w1.html</code>, <code>squads-m2.html</code>, <code>squads-w2.html</code> — which isn't linked anywhere else on the site.</p>
     </div>
   </section>
 
@@ -106,16 +104,10 @@
             <tr><th>Day</th><th>Time</th><th>Squad</th><th>Venue</th></tr>
           </thead>
           <tbody>
-            <tr><td>Monday</td><td>7:00 – 8:30am</td><td>Men's &amp; Women's Blues</td><td>Rosenblatt Pool</td></tr>
-            <tr><td>Tuesday</td><td>8:00 – 9:00pm</td><td>Seconds</td><td>Rosenblatt Pool</td></tr>
-            <tr><td>Wednesday</td><td>7:00 – 8:30am</td><td>Men's &amp; Women's Blues</td><td>Rosenblatt Pool</td></tr>
-            <tr><td>Thursday</td><td>6:00 – 7:00pm</td><td>Novice &amp; Social</td><td>Rosenblatt Pool</td></tr>
-            <tr><td>Friday</td><td>7:00 – 8:30am</td><td>Blues / Seconds</td><td>Rosenblatt Pool</td></tr>
-            <tr><td>Sunday</td><td>5:00 – 6:30pm</td><td>All squads</td><td>Rosenblatt Pool</td></tr>
+            <tr><td colspan="4" style="text-align:center; color:var(--pool-teal-light); font-family:var(--font-mono); font-size:.85rem; padding:2rem;">Training schedule to be confirmed — check back soon.</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="upload-note">Placeholder schedule — update times, days, and venues to match your committee's actual booked slots for the current term.</p>
     </div>
   </section>
 
@@ -139,11 +131,6 @@
         </div>
         <div>
           <h4>Sponsors</h4>
-          <!--
-            Add a sponsor logo at images/sponsors/sponsor-1.png and point
-            the href below at their website. Add more sponsors by copying
-            this whole <a> block.
-          -->
           <a href="https://pinewood.ai/" target="_blank" rel="noopener" class="footer-sponsor-link">
             <img src="images/sponsors/sponsor-1.png" alt="Sponsor"
                  onerror="this.outerHTML='&lt;span class=&quot;affiliate-fallback&quot; style=&quot;color:var(--white);border-color:rgba(255,255,255,.3);&quot;&gt;Add sponsor logo&lt;/span&gt;'">
