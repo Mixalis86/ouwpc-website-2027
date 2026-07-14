@@ -9,58 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* ── Index-only styles ── */
     .home-slideshow { aspect-ratio: 16/7; }
-
-    /* Three-layer wave, white → pale → mid-blue → oxford-blue */
-    .wave-hero {
-      background: var(--white);
-      position: relative;
-      line-height: 0;
-      margin: 0; padding: 0;
-    }
+    .wave-hero { background: var(--white); position: relative; line-height: 0; margin: 0; padding: 0; }
     .wave-hero svg { display: block; width: 100%; }
-
     .welcome-lede { max-width: 118ch; margin: 0 auto; font-size: 1.05rem; text-align: center; color: rgba(255,255,255,.88); line-height: 1.75; }
     .welcome-lede a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
     .welcome-lede a:hover { color: var(--accent-hover); }
-
-    .squad-list {
-      max-width: 88ch;
-      margin: 1.1rem auto;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.6rem 1.6rem;
-    }
-    .squad-list li {
-      position: relative;
-      padding-left: 1.1rem;
-    }
-    .squad-list li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.55em;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-    .squad-list a {
-      color: var(--accent);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      font-size: 1.05rem;
-    }
+    .squad-list { max-width: 88ch; margin: 1.1rem auto; padding: 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 1.6rem; }
+    .squad-list li { position: relative; padding-left: 1.1rem; }
+    .squad-list li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .squad-list a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; font-size: 1.05rem; }
     .squad-list a:hover { color: var(--accent-hover); }
-
-    /* Results section */
     .results-section { background: var(--foam); }
-
-    /* Player slideshow */
     .player-slideshow { aspect-ratio: 16/7; }
   </style>
 </head>
@@ -68,7 +28,6 @@
 
 <a href="#main" class="skip-link">Skip to content</a>
 
-<!-- ── NAV ── -->
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="brand">
@@ -92,60 +51,42 @@
 
 <main id="main">
 
-  <!-- ── LOGO BANNER (white) ── -->
   <div class="logo-banner">
     <div class="container">
-      <!--
-        Drop your logo file at images/team/main-banner.png
-        The image you showed (Oxford University / crown / Water Polo Club / Ouwpc) works perfectly here.
-        A transparent-background PNG will look cleanest on the white background.
-      -->
       <img src="images/team/main-banner.png" alt="Oxford University Water Polo Club" loading="eager"
            onerror="this.outerHTML='&lt;div class=&quot;logo-banner-placeholder&quot;&gt;Add logo at images/team/main-banner.png&lt;/div&gt;'">
     </div>
   </div>
 
-  <!-- ── WAVE TRANSITION: white → oxford-blue ── -->
-  <!-- Three stacked SVG paths give depth rather than a hard colour change -->
   <div class="wave-hero" aria-hidden="true">
     <svg viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- layer 1: white background fill -->
       <rect width="1440" height="160" fill="#ffffff"/>
-      <!-- layer 2: pale mid-tone -->
       <path d="M0,80 C200,140 400,20 720,80 C1040,140 1240,30 1440,80 L1440,160 L0,160 Z" fill="#dce8f0" opacity="0.7"/>
-      <!-- layer 3: pool teal -->
       <path d="M0,105 C260,55 480,150 720,105 C960,55 1200,140 1440,105 L1440,160 L0,160 Z" fill="#0b4f6c" opacity="0.85"/>
-      <!-- layer 4: oxford blue — fills solid to bottom -->
       <path d="M0,130 C300,95 600,155 900,120 C1100,100 1300,145 1440,125 L1440,160 L0,160 Z" fill="#002147"/>
     </svg>
   </div>
 
-  <!-- ── MAIN SLIDESHOW ── -->
   <section style="background:var(--oxford-blue); padding: 0 0 clamp(2rem,4vw,3.5rem);">
     <div class="container">
       <div class="slideshow home-slideshow" data-slideshow data-interval="5000">
         <div class="slideshow-track">
-
           <div class="slideshow-slide">
             <img src="images/gallery/home-slide-1.jpg" alt="" loading="eager"
-                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;Add images/gallery/home-slide-1.jpg&lt;/div&gt;'">
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
           </div>
-
           <div class="slideshow-slide">
             <img src="images/gallery/home-slide-2.jpg" alt="" loading="lazy"
-                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;Add images/gallery/home-slide-2.jpg&lt;/div&gt;'">
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
           </div>
-
           <div class="slideshow-slide">
             <img src="images/gallery/home-slide-3.jpg" alt="" loading="lazy"
-                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;Add images/gallery/home-slide-3.jpg&lt;/div&gt;'">
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
           </div>
-
           <div class="slideshow-slide">
             <img src="images/gallery/home-slide-4.jpg" alt="" loading="lazy"
-                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;Add images/gallery/home-slide-4.jpg&lt;/div&gt;'">
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
           </div>
-
         </div>
         <button class="slideshow-nav prev" aria-label="Previous slide">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
@@ -158,7 +99,6 @@
     </div>
   </section>
 
-  <!-- ── WELCOME ── -->
   <section class="welcome-section">
     <div class="container">
       <h1>Welcome to the Home of Oxford University Water Polo Club</h1>
@@ -175,7 +115,7 @@
         Our squads compete in
         <a href="fixtures.html">BUCS (British Universities &amp; Colleges Sport)</a> leagues,
         and every year we contest the prestigious <a href="fixtures.html#varsity">Varsity match</a> against Cambridge —
-        the longest-running annual water polo rivalry in the world, first played in 1891!¬
+        the longest-running annual water polo rivalry in the world, first played in 1891!
         <br><br>
         <a href="join.html">Freshers &amp; newcomers</a> — find out how to get involved.&ensp;|&ensp;
         <a href="alumni.html">Alumni</a> — stay connected with the club.
@@ -183,7 +123,6 @@
     </div>
   </section>
 
-  <!-- ── RECENT RESULTS ── -->
   <section class="results-section">
     <div class="container">
       <div class="section-head">
@@ -193,24 +132,19 @@
       <div class="card" style="padding:0; overflow:auto;">
         <table class="data-table">
           <thead>
-          <tr><th>Date</th><th>Squad</th><th>Opponent</th><th>Score</th><th>Result</th></tr>
+            <tr><th>Date</th><th>Squad</th><th>Opponent</th><th>Score</th><th>Result</th></tr>
           </thead>
           <tbody>
-          <!--
-            Update these rows after each match.
-            Copy/paste a <tr> block to add more results.
-          -->
-          <tr><td>28/02</td><td>W1</td><td>Cambridge</td><td>12 : 3</td><td><span class="tag tag-win">Win</span></td></tr>
-          <tr><td>28/02</td><td>M1</td><td>Cambridge</td><td>16 : 15 (5-4 in penalties)</td><td><span class="tag tag-win">Win</span></td></tr>
-          <tr><td>28/02</td><td>W2</td><td>Cambridge</td><td>6 : 7</td><td><span class="tag tag-loss">Loss</span></td></tr>
-          <tr><td>28/02</td><td>M2</td><td>Cambridge</td><td>3 : 15</td><td><span class="tag tag-loss">Loss</span></td></tr>
+            <tr><td>28/02</td><td>W1</td><td>Cambridge</td><td>12 : 3</td><td><span class="tag tag-win">Win</span></td></tr>
+            <tr><td>28/02</td><td>M1</td><td>Cambridge</td><td>16 : 15 (5-4 in penalties)</td><td><span class="tag tag-win">Win</span></td></tr>
+            <tr><td>28/02</td><td>W2</td><td>Cambridge</td><td>6 : 7</td><td><span class="tag tag-loss">Loss</span></td></tr>
+            <tr><td>28/02</td><td>M2</td><td>Cambridge</td><td>3 : 15</td><td><span class="tag tag-loss">Loss</span></td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
 
-  <!-- ── PLAYER / TEAM SLIDESHOW ── -->
   <section class="section-tinted" style="padding-top:0;">
     <div class="container">
       <div class="section-head" style="padding-top:clamp(3rem,6vw,5rem);">
@@ -218,27 +152,22 @@
       </div>
       <div class="slideshow player-slideshow" data-slideshow data-interval="6000">
         <div class="slideshow-track">
-
           <div class="slideshow-slide">
             <img src="images/gallery/players-1.jpg" alt="" loading="lazy"
-                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;Add images/gallery/players-1.jpg&lt;/div&gt
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
           </div>
-
           <div class="slideshow-slide">
             <img src="images/gallery/players-2.jpg" alt="" loading="lazy"
-                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;Add images/gallery/players-2.jpg&lt;/div&gt
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
           </div>
-
           <div class="slideshow-slide">
             <img src="images/gallery/players-3.jpg" alt="" loading="lazy"
-                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;Add images/gallery/players-3.jpg&lt;/div&gt
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
           </div>
-
           <div class="slideshow-slide">
             <img src="images/gallery/players-4.jpg" alt="" loading="lazy"
-                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;Add images/gallery/players-4.jpg&lt;/div&gt
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
           </div>
-
         </div>
         <button class="slideshow-nav prev" aria-label="Previous slide">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
@@ -253,7 +182,6 @@
 
 </main>
 
-<!-- ── FOOTER ── -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-top">
@@ -272,11 +200,6 @@
         </div>
         <div>
           <h4>Sponsors</h4>
-          <!--
-            Add a sponsor logo at images/sponsors/sponsor-1.png and point
-            the href below at their website. Add more sponsors by copying
-            this whole <a> block.
-          -->
           <a href="https://pinewood.ai/" target="_blank" rel="noopener" class="footer-sponsor-link">
             <img src="images/sponsors/sponsor-1.png" alt="Sponsor"
                  onerror="this.outerHTML='&lt;span class=&quot;affiliate-fallback&quot; style=&quot;color:var(--white);border-color:rgba(255,255,255,.3);&quot;&gt;Add sponsor logo&lt;/span&gt;'">
