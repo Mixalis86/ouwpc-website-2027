@@ -22,6 +22,12 @@
     .squad-list a:hover { color: var(--accent-hover); }
     .results-section { background: var(--foam); }
     .player-slideshow { aspect-ratio: 16/7; }
+    .announcements-section { background: var(--oxford-blue); color: var(--white); }
+    .announcements-section h2 { color: var(--white); }
+    .announcement-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.8rem; }
+    .announcement-list li { border-left: 3px solid var(--accent); padding: 0.7rem 1rem; background: rgba(255,255,255,0.05); border-radius: 0 var(--radius) var(--radius) 0; font-size: 0.97rem; }
+    .announcement-list a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    .announcement-list a:hover { color: var(--accent-hover); }
   </style>
 </head>
 <body>
@@ -103,23 +109,44 @@
     <div class="container">
       <h1>Welcome to the Home of Oxford University Water Polo Club</h1>
       <p class="welcome-lede">
-        Founded in 1891 and based at the Rosenblatt Pool on Iffley Road, Oxford University Water Polo Club (OUWPC) consists of four squads:
-      </p>
-      <ul class="squad-list">
-        <li><a href="squads-m1.html">M1 (Men's Blues)</a></li>
-        <li><a href="squads-w1.html">W1 (Women's Blues)</a></li>
-        <li><a href="squads-m2.html">M2 (Men's Seconds)</a></li>
-        <li><a href="squads-w2.html">W2 (Women's Seconds)</a></li>
-      </ul>
-      <p class="welcome-lede">
-        Our squads compete in
-        <a href="fixtures.html">BUCS (British Universities &amp; Colleges Sport)</a> leagues,
-        and every year we contest the prestigious <a href="fixtures.html#varsity">Varsity match</a> against Cambridge —
-        the longest-running annual water polo rivalry in the world, first played in 1891!
+        Founded in 1891, OUWPC is one of the university's oldest and most historic sports clubs.
+        The club has a thriving membership base that makes up our four
+        <a href="squads.html">squads</a> that compete in
+        <a href="https://www.bucs.org.uk/" target="_blank" rel="noopener">BUCS</a> leagues,
+        and the prestigious annual <a href="fixtures.html#varsity">Varsity match</a> against Cambridge —
+        the longest-running water polo competition in the world, first played in 1891!
+        You can find us at the Rosenblatt Pool in the Iffley Road Sports Centre.
+        You can find more information about us <a href="about.html">here</a>.
         <br><br>
         <a href="join.html">Freshers &amp; newcomers</a> — find out how to get involved.&ensp;|&ensp;
         <a href="alumni.html">Alumni</a> — stay connected with the club.
       </p>
+    </div>
+  </section>
+
+  <!-- ANNOUNCEMENTS -->
+  <section class="announcements-section">
+    <div class="container">
+      <h2 style="margin-bottom:1.4rem;">Announcements</h2>
+      <ul class="announcement-list">
+
+        <!--
+          PRE-SEASON SIGN-UP:
+          Replace the # in the href below with your Google Form link, e.g.:
+          href="https://docs.google.com/forms/d/YOUR_FORM_ID/viewform"
+        -->
+        <li>Pre-season sign-up is now open — <a href="#">click here to register</a></li>
+
+        <!--
+          Add more announcements by copying the <li> line above.
+          Examples:
+          <li>Alumni dinner — date TBC</li>
+          <li>Varsity 2026 — date and venue TBC</li>
+          <li>Varsity squads announced — <a href="#">see the list</a></li>
+          <li>Alumni newsletter — <a href="#">read the latest edition</a></li>
+        -->
+
+      </ul>
     </div>
   </section>
 
