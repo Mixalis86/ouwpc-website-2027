@@ -12,6 +12,9 @@
   .squad-tier { margin-bottom: 1.4rem; }
   .squad-tier:last-child { margin-bottom: 0; }
   .squad-tier-label { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--pool-teal-light); margin-bottom: .8rem; }
+  .squad-desc-card { padding: 1.6rem; }
+  .squad-desc-card h3 { color: var(--oxford-blue); font-size: 1.1rem; margin-bottom: .6rem; }
+  .squad-desc-card p { font-size: .94rem; line-height: 1.6; }
 </style>
 </head>
 <body>
@@ -52,44 +55,28 @@
     <div class="container">
       <div class="squad-tier">
         <p class="squad-tier-label">Blues</p>
-        <div class="squad-photo-grid">
-          <a href="squads-m1.html" class="squad-photo-link">
-            <img src="images/team/squad-m1.jpg" alt="Men's Blues" loading="lazy"
-                 onerror="this.outerHTML='&lt;div class=&quot;squad-placeholder&quot;&gt;&lt;/div&gt;'">
-            <div class="squad-photo-overlay">
-              <div class="squad-tag">Blues</div>
-              <h3>Men's Blues</h3>
-            </div>
-          </a>
-          <a href="squads-w1.html" class="squad-photo-link">
-            <img src="images/team/squad-w1.jpg" alt="Women's Blues" loading="lazy"
-                 onerror="this.outerHTML='&lt;div class=&quot;squad-placeholder&quot;&gt;&lt;/div&gt;'">
-            <div class="squad-photo-overlay">
-              <div class="squad-tag">Blues</div>
-              <h3>Women's Blues</h3>
-            </div>
-          </a>
+        <div class="grid grid-2" style="gap:1.5rem;">
+          <div class="card squad-desc-card">
+            <h3>Men's Blues</h3>
+            <p>Compete in the BUCS Open Premier South League and National Championship. We have recently had members who have played internationally at the national age-group level.</p>
+          </div>
+          <div class="card squad-desc-card">
+            <h3>Women's Blues</h3>
+            <p>Compete in the BUCS Female Premier South League and the National Championship, recently winning the league and making the final four in the cup.</p>
+          </div>
         </div>
       </div>
       <div class="squad-tier">
         <p class="squad-tier-label">Seconds</p>
-        <div class="squad-photo-grid">
-          <a href="squads-m2.html" class="squad-photo-link">
-            <img src="images/team/squad-m2.jpg" alt="Men's Seconds" loading="lazy"
-                 onerror="this.outerHTML='&lt;div class=&quot;squad-placeholder&quot;&gt;&lt;/div&gt;'">
-            <div class="squad-photo-overlay">
-              <div class="squad-tag">Seconds</div>
-              <h3>Men's Seconds</h3>
-            </div>
-          </a>
-          <a href="squads-w2.html" class="squad-photo-link">
-            <img src="images/team/squad-w2.jpg" alt="Women's Seconds" loading="lazy"
-                 onerror="this.outerHTML='&lt;div class=&quot;squad-placeholder&quot;&gt;&lt;/div&gt;'">
-            <div class="squad-photo-overlay">
-              <div class="squad-tag">Seconds</div>
-              <h3>Women's Seconds</h3>
-            </div>
-          </a>
+        <div class="grid grid-2" style="gap:1.5rem;">
+          <div class="card squad-desc-card">
+            <h3>Men's Seconds</h3>
+            <p>Play in the BUCS Open Midlands Tier 2 League and Conference Cup. The team contains a range of aspiring players and newbies and regularly integrates with the Blues in training and matches.</p>
+          </div>
+          <div class="card squad-desc-card">
+            <h3>Women's Seconds</h3>
+            <p>The ever growing squad has yet to be entered into BUCS competitions but trains with the Blues year-round, plays in organised friendlies, and plays in Varsity against Cambridge. The Women's Seconds have been a vital pipe-line of players to the first team, with talented newbies developed at Oxford making-up a proportion of the Women's Blues every year.</p>
+          </div>
         </div>
       </div>
     </div>
