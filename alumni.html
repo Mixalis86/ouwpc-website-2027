@@ -8,6 +8,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  .committee-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .committee-table td { padding: 0.65rem 0.9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .committee-table td:first-child { font-weight: 600; color: var(--oxford-blue); white-space: nowrap; }
+  .committee-table tr:last-child td { border-bottom: none; }
+  .committee-table tr:hover td { background: var(--foam-dim); }
+
+  .events-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.8rem; }
+  .events-list li { border-left: 3px solid var(--accent); padding: 0.7rem 1rem; background: var(--foam-dim); border-radius: 0 var(--radius) var(--radius) 0; font-size: 0.97rem; }
+  .events-list .event-name { font-family: var(--font-display); font-size: 1rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--oxford-blue); }
+  .events-list .event-detail { font-size: 0.87rem; color: #3a4754; margin-top: 0.2rem; }
+
+  .dinner-slideshow { aspect-ratio: 16/7; }
+
+  .ouswpa-intro { font-size: 1.08rem; line-height: 1.78; color: var(--oxford-blue); font-style: italic; border-left: 4px solid var(--accent); padding-left: 1.4rem; max-width: 72ch; }
+</style>
 </head>
 <body>
 
@@ -43,9 +59,188 @@
     </div>
   </section>
 
+  <!-- INTRO -->
   <section>
-    <div class="container" style="text-align:center; padding-top:2rem; padding-bottom:4rem;">
-      <p style="font-size:1.1rem;">This page is currently a work in progress — check back soon.</p>
+    <div class="container">
+      <p class="ouswpa-intro">We hope our members' bond to OUWPC stretches beyond just their time spent studying in Oxford. We are incredibly lucky to have the support of OUSWPA, and the annual events we hold together, to help foster this lifelong connection. To alumni, we hope this page can help you stay in touch or will encourage you to reconnect when you can!</p>
+    </div>
+  </section>
+
+  <!-- OUSWPA -->
+  <section class="section-tinted">
+    <div class="container">
+      <div class="section-head"><div><h2>OUSWPA</h2></div></div>
+      <div style="max-width:72ch; display:flex; flex-direction:column; gap:1rem;">
+        <p>The Oxford University Swimming and Water Polo Association (OUSWPA) is a network connecting alumni of the Oxford University Swimming Club (OUSC) and Oxford University Water Polo Club (OUWPC), while supporting both clubs through advice, institutional knowledge, and financial assistance. Founded in 1998 as a joint association, OUSWPA was established to strengthen links between the two clubs and provide a coordinated voice on matters of common interest. Its support has included an instrumental role in fundraising for the Rosenblatt Swimming Pool, built in 2004, before which Oxford was without a university pool.</p>
+        <p>OUSWPA is run by a committee comprising alumni from both clubs, sitting and recent club presidents, and the Senior Members of OUSC and OUWPC. The committee meets regularly to consider matters affecting the clubs and their wider alumni community. The main event in the OUSWPA calendar is the annual dinner, held in Trinity Term and open to current and former members of both clubs. At the dinner, the committee presents the Nick Thomas Award to a current member of OUSC or OUWPC who has made an exceptional contribution to club life, prosperity, cohesion and community. Named in honour of one of the clubs' great supporters, the award celebrates those who strengthen the swimming and water polo community through advocacy, generosity, good-naturedness, and respect.</p>
+        <p>Membership of OUSWPA is open to all alumni of both clubs. There is no membership fee, though a voluntary donation to help support the running of the clubs is very gratefully received. For information on how to donate to OUSWPA please contact the committee through either the OUSC or OUWPC committees.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMITTEE -->
+  <section>
+    <div class="container">
+      <div class="section-head"><div><h2>Current OUSWPA Committee</h2></div></div>
+      <p style="margin-bottom:1.4rem; color:#3a4754; font-size:0.94rem;">Excluding club Presidents.</p>
+      <div class="card" style="padding:0; overflow:auto; max-width:760px;">
+        <table class="committee-table">
+          <tbody>
+            <tr>
+              <td>James Felce</td>
+              <td>Chair and OUWPC Senior Member <span style="color:#3a4754; font-weight:400;">(OUWPC, 2005–2015)</span></td>
+            </tr>
+            <tr>
+              <td>Hannah Wilson</td>
+              <td>Secretary <span style="color:#3a4754; font-weight:400;">(OUWPC, 2003–2008, 2015–2019)</span></td>
+            </tr>
+            <tr>
+              <td>Stephen Harrison</td>
+              <td>Treasurer <span style="color:#3a4754; font-weight:400;">(OUWPC, 2002–2006)</span></td>
+            </tr>
+            <tr>
+              <td>David Groiser</td>
+              <td>OUSC Senior Member</td>
+            </tr>
+            <tr>
+              <td>Vincent Luscombe</td>
+              <td>Events Coordinator <span style="color:#3a4754; font-weight:400;">(OUWPC, 2020–2024)</span></td>
+            </tr>
+            <tr>
+              <td>Lexie Elliot</td>
+              <td style="color:#3a4754; font-weight:400;">OUSC, OUWPC, 1994–2001</td>
+            </tr>
+            <tr>
+              <td>Martin Davis</td>
+              <td style="color:#3a4754; font-weight:400;">OUSC, 1995–1999</td>
+            </tr>
+            <tr>
+              <td>Nick Edelman</td>
+              <td style="color:#3a4754; font-weight:400;">OUSC, OUWPC, 2000–2004</td>
+            </tr>
+            <tr>
+              <td>Koji Urata</td>
+              <td style="color:#3a4754; font-weight:400;">OUSC, 2008–2016</td>
+            </tr>
+            <tr>
+              <td>Dom McLoughlin</td>
+              <td style="color:#3a4754; font-weight:400;">OUSC, OUWPC, 2013–2021</td>
+            </tr>
+            <tr>
+              <td>Felix Gallagher</td>
+              <td style="color:#3a4754; font-weight:400;">OUSC, 2019–2022</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section-tinted">
+    <div class="container">
+      <div class="section-head"><div><h2>Upcoming Events</h2></div></div>
+      <ul class="events-list">
+        <li>
+          <div class="event-name">December Drinks 2026</div>
+          <div class="event-detail">London — date TBC</div>
+        </li>
+        <li>
+          <div class="event-name">Alumni Varsity Match 2027</div>
+          <div class="event-detail">Cambridge — date TBC</div>
+        </li>
+        <li>
+          <div class="event-name">Alumni Dinner 2027</div>
+          <div class="event-detail">Oxford — date TBC</div>
+        </li>
+      </ul>
+      <p style="margin-top:1rem; font-size:0.9rem; color:#3a4754;">Dates are being coordinated by Vincent Luscombe — check back for updates.</p>
+    </div>
+  </section>
+
+  <!-- ALUMNI DINNER PHOTOS -->
+  <section>
+    <div class="container">
+      <div class="section-head"><div><h2>Alumni Dinner 2025</h2></div></div>
+      <div class="slideshow dinner-slideshow" data-slideshow data-interval="4000">
+        <div class="slideshow-track">
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-1.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-2.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-3.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-4.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-5.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-6.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-7.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-8.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-9.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-10.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-11.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-12.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-13.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-14.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-15.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-16.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+          <div class="slideshow-slide">
+            <img src="images/gallery/alumnidinner-17.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.slideshow-slide').innerHTML='&lt;div class=&quot;slideshow-placeholder&quot;&gt;&lt;/div&gt;'">
+          </div>
+        </div>
+        <button class="slideshow-nav prev" aria-label="Previous slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="slideshow-nav next" aria-label="Next slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="slideshow-dots"></div>
+      </div>
     </div>
   </section>
 
