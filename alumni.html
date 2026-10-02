@@ -1,35 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alumni — Oxford University Water Polo Club</title>
-<meta name="description" content="Stay connected with Oxford University Water Polo Club as an alumnus or alumna.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<style>
-  .committee-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-  .committee-table td { padding: 0.65rem 0.9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
-  .committee-table td:first-child { font-weight: 600; color: var(--oxford-blue); white-space: nowrap; }
-  .committee-table tr:last-child td { border-bottom: none; }
-  .committee-table tr:hover td { background: var(--foam-dim); }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni — Oxford University Water Polo Club</title>
+  <meta name="description" content="Stay connected with Oxford University Water Polo Club as an alumnus or alumna.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .committee-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    .committee-table td { padding: 0.65rem 0.9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .committee-table td:first-child { font-weight: 600; color: var(--oxford-blue); white-space: nowrap; }
+    .committee-table tr:last-child td { border-bottom: none; }
+    .committee-table tr:hover td { background: var(--foam-dim); }
 
-  .events-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.8rem; }
-  .events-list li { border-left: 3px solid var(--accent); padding: 0.7rem 1rem; background: var(--foam-dim); border-radius: 0 var(--radius) var(--radius) 0; font-size: 0.97rem; }
-  .events-list .event-name { font-family: var(--font-display); font-size: 1rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--oxford-blue); }
-  .events-list .event-detail { font-size: 0.87rem; color: #3a4754; margin-top: 0.2rem; }
+    .events-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.8rem; }
+    .events-list li { border-left: 3px solid var(--accent); padding: 0.7rem 1rem; background: var(--foam-dim); border-radius: 0 var(--radius) var(--radius) 0; font-size: 0.97rem; }
+    .events-list .event-name { font-family: var(--font-display); font-size: 1rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--oxford-blue); }
+    .events-list .event-detail { font-size: 0.87rem; color: #3a4754; margin-top: 0.2rem; }
 
-  .dinner-slideshow { aspect-ratio: 16/7; }
+    .dinner-slideshow { aspect-ratio: 16/7; }
 
-  .ouswpa-intro { font-size: 1.08rem; line-height: 1.78; color: var(--oxford-blue); font-style: italic; border-left: 4px solid var(--accent); padding-left: 1.4rem; max-width: 72ch; }
+    .ouswpa-intro { font-size: 1.08rem; line-height: 1.78; color: var(--oxford-blue); font-style: italic; border-left: 4px solid var(--accent); padding-left: 1.4rem; max-width: 72ch; }
 
-  /* Text/table + photo split, used to fill out empty space beside the OUSWPA copy and committee table */
-  .alumni-split { display: grid; grid-template-columns: minmax(0, 72ch) minmax(200px, 300px); gap: 2.4rem; align-items: start; }
-  .alumni-split-photo { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/5; box-shadow: 0 10px 30px rgba(0,33,71,0.12); }
-  .alumni-split-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  @media (max-width: 960px) { .alumni-split { grid-template-columns: 1fr; } .alumni-split-photo { aspect-ratio: 16/9; } }
-</style>
+    /* Two-column layout: text + photo stack */
+    .alumni-split {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(200px, 300px);
+      gap: 2.4rem;
+      align-items: start;
+    }
+
+    /* Photo column – becomes a vertical stack */
+    .alumni-photo-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .alumni-split-photo {
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/5;           /* keeps consistent portrait ratio */
+      box-shadow: 0 10px 30px rgba(0,33,71,0.12);
+      background: #f0f2f5;
+      width: 100%;
+    }
+
+    .alumni-split-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* On smaller screens: single column, photos go side-by-side or stacked nicely */
+    @media (max-width: 960px) {
+      .alumni-split {
+        grid-template-columns: 1fr;
+      }
+      .alumni-photo-stack {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .alumni-split-photo {
+        flex: 1 1 45%;
+        aspect-ratio: 16/9;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .alumni-photo-stack {
+        flex-direction: column;
+      }
+      .alumni-split-photo {
+        flex: 1 1 100%;
+        aspect-ratio: 4/3;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -77,18 +127,22 @@
     <div class="container">
       <div class="section-head"><div><h2>OUSWPA</h2></div></div>
       <div class="alumni-split">
+        <!-- Text column -->
         <div style="display:flex; flex-direction:column; gap:1rem;">
           <p>The Oxford University Swimming and Water Polo Association (OUSWPA) is a network connecting alumni of the Oxford University Swimming Club (OUSC) and Oxford University Water Polo Club (OUWPC), while supporting both clubs through advice, institutional knowledge, and financial assistance. Founded in 1998 as a joint association, OUSWPA was established to strengthen links between the two clubs and provide a coordinated voice on matters of common interest. Its support has included an instrumental role in fundraising for the Rosenblatt Swimming Pool, built in 2004, before which Oxford was without a university pool.</p>
           <p>OUSWPA is run by a committee comprising alumni from both clubs, sitting and recent club presidents, and the Senior Members of OUSC and OUWPC. The committee meets regularly to consider matters affecting the clubs and their wider alumni community. The main event in the OUSWPA calendar is the annual dinner, held in Trinity Term and open to current and former members of both clubs. At the dinner, the committee presents the Nick Thomas Award to a current member of OUSC or OUWPC who has made an exceptional contribution to club life, prosperity, cohesion and community. Named in honour of one of the clubs' great supporters, the award celebrates those who strengthen the swimming and water polo community through advocacy, generosity, good-naturedness, and respect.</p>
           <p>Membership of OUSWPA is open to all alumni of both clubs. There is no membership fee, though a voluntary donation to help support the running of the clubs is very gratefully received. For information on how to donate to OUSWPA please contact the committee through either the OUSC or OUWPC committees.</p>
         </div>
-        <div class="alumni-split-photo">
-          <img src="images/gallery/alumnidinner-9.jpg" alt="Alumni Dinner" loading="lazy"
-               onerror="this.closest('.alumni-split-photo').remove()">
-        </div>
-        <div class="alumni-split-photo">
-          <img src="images/gallery/alumnidinner-13.jpg" alt="Alumni Dinner" loading="lazy"
-               onerror="this.closest('.alumni-split-photo').remove()">
+        <!-- Photo stack: two images, stacked vertically (or side by side on mobile) -->
+        <div class="alumni-photo-stack">
+          <div class="alumni-split-photo">
+            <img src="images/gallery/alumnidinner-9.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.alumni-split-photo').remove()">
+          </div>
+          <div class="alumni-split-photo">
+            <img src="images/gallery/alumnidinner-13.jpg" alt="Alumni Dinner" loading="lazy"
+                 onerror="this.closest('.alumni-split-photo').remove()">
+          </div>
         </div>
       </div>
     </div>
@@ -150,6 +204,9 @@
             </tbody>
           </table>
         </div>
+        <!-- Photo stack for committee section (optional, could be empty) 
+             We keep the layout consistent but only one empty placeholder for future use.
+             You can add another image here if you like. -->
       </div>
     </div>
   </section>
@@ -175,7 +232,7 @@
     </div>
   </section>
 
-  <!-- ALUMNI DINNER PHOTOS -->
+  <!-- ALUMNI DINNER PHOTOS SLIDESHOW -->
   <section>
     <div class="container">
       <div class="section-head"><div><h2>Alumni Dinner 2026</h2></div></div>
