@@ -35,6 +35,32 @@
   @media (max-width: 900px) { .photo-masonry { columns: 3; } }
   @media (max-width: 600px) { .photo-masonry { columns: 2; } }
 
+  /* Collapsed gallery: show only the first few items until expanded */
+  .photo-masonry.is-collapsed .photo-masonry-item:nth-child(n+6) { display: none; }
+
+  .gallery-show-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.1rem;
+  }
+  .gallery-show-more.is-hidden { display: none; }
+  .gallery-show-more button {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    color: var(--oxford-blue);
+    background: var(--foam-dim);
+    border: 1px solid var(--line);
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .gallery-show-more button:hover {
+    background: var(--foam);
+    border-color: var(--accent);
+  }
+
   /* Lightbox */
   .lightbox {
     display: none;
@@ -136,7 +162,7 @@
       <div class="section-head">
         <div><h2>Varsity</h2></div>
       </div>
-      <div class="photo-masonry" id="varsity-grid">
+      <div class="photo-masonry is-collapsed" id="varsity-grid">
         <div class="photo-masonry-item" data-gallery="varsity" data-index="0"><img src="images/gallery/varsity-1.jpg" alt="Varsity 1" loading="lazy"></div>
         <div class="photo-masonry-item" data-gallery="varsity" data-index="1"><img src="images/gallery/varsity-2.jpg" alt="Varsity 2" loading="lazy"></div>
         <div class="photo-masonry-item" data-gallery="varsity" data-index="2"><img src="images/gallery/varsity-3.jpg" alt="Varsity 3" loading="lazy"></div>
@@ -152,48 +178,49 @@
         <div class="photo-masonry-item" data-gallery="varsity" data-index="12"><img src="images/gallery/varsity-13.jpg" alt="Varsity 13" loading="lazy"></div>
         <div class="photo-masonry-item" data-gallery="varsity" data-index="13"><img src="images/gallery/varsity-14.jpg" alt="Varsity 14" loading="lazy"></div>
         <div class="photo-masonry-item" data-gallery="varsity" data-index="14"><img src="images/gallery/varsity-15.jpg" alt="Varsity 15" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="15"><img src="images/gallery/varsity-16.jpg" alt="Varsity 16" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="16"><img src="images/gallery/varsity-17.jpg" alt="Varsity 17" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="17"><img src="images/gallery/varsity-18.jpg" alt="Varsity 18" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="18"><img src="images/gallery/varsity-19.jpg" alt="Varsity 19" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="19"><img src="images/gallery/varsity-20.jpg" alt="Varsity 20" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="20"><img src="images/gallery/varsity-21.jpg" alt="Varsity 21" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="21"><img src="images/gallery/varsity-22.jpg" alt="Varsity 22" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="22"><img src="images/gallery/varsity-23.jpg" alt="Varsity 23" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="23"><img src="images/gallery/varsity-24.jpg" alt="Varsity 24" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="24"><img src="images/gallery/varsity-25.jpg" alt="Varsity 25" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="25"><img src="images/gallery/varsity-26.jpg" alt="Varsity 26" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="26"><img src="images/gallery/varsity-27.jpg" alt="Varsity 27" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="27"><img src="images/gallery/varsity-28.jpg" alt="Varsity 28" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="28"><img src="images/gallery/varsity-29.jpg" alt="Varsity 29" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="29"><img src="images/gallery/varsity-30.jpg" alt="Varsity 30" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="30"><img src="images/gallery/varsity-31.jpg" alt="Varsity 31" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="31"><img src="images/gallery/varsity-32.jpg" alt="Varsity 32" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="32"><img src="images/gallery/varsity-33.jpg" alt="Varsity 33" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="33"><img src="images/gallery/varsity-34.jpg" alt="Varsity 34" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="34"><img src="images/gallery/varsity-35.jpg" alt="Varsity 35" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="35"><img src="images/gallery/varsity-36.jpg" alt="Varsity 36" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="36"><img src="images/gallery/varsity-37.jpg" alt="Varsity 37" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="37"><img src="images/gallery/varsity-38.jpg" alt="Varsity 38" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="38"><img src="images/gallery/varsity-39.jpg" alt="Varsity 39" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="39"><img src="images/gallery/varsity-40.jpg" alt="Varsity 40" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="40"><img src="images/gallery/varsity-41.jpg" alt="Varsity 41" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="41"><img src="images/gallery/varsity-42.jpg" alt="Varsity 42" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="42"><img src="images/gallery/varsity-43.jpg" alt="Varsity 43" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="43"><img src="images/gallery/varsity-44.jpg" alt="Varsity 44" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="44"><img src="images/gallery/varsity-45.jpg" alt="Varsity 45" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="45"><img src="images/gallery/varsity-46.jpg" alt="Varsity 46" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="46"><img src="images/gallery/varsity-47.jpg" alt="Varsity 47" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="47"><img src="images/gallery/varsity-48.jpg" alt="Varsity 48" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="48"><img src="images/gallery/varsity-49.jpg" alt="Varsity 49" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="49"><img src="images/gallery/varsity-50.jpg" alt="Varsity 50" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="50"><img src="images/gallery/varsity-51.jpg" alt="Varsity 51" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="51"><img src="images/gallery/varsity-52.jpg" alt="Varsity 52" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="52"><img src="images/gallery/varsity-53.jpg" alt="Varsity 53" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="53"><img src="images/gallery/varsity-54.jpg" alt="Varsity 54" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="54"><img src="images/gallery/varsity-55.jpg" alt="Varsity 55" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="55"><img src="images/gallery/varsity-56.jpg" alt="Varsity 56" loading="lazy"></div>
-        <div class="photo-masonry-item" data-gallery="varsity" data-index="56"><img src="images/gallery/varsity-57.jpg" alt="Varsity 57" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="15"><img src="images/gallery/varsity-18.jpg" alt="Varsity 18" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="16"><img src="images/gallery/varsity-19.jpg" alt="Varsity 19" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="17"><img src="images/gallery/varsity-20.jpg" alt="Varsity 20" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="18"><img src="images/gallery/varsity-21.jpg" alt="Varsity 21" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="19"><img src="images/gallery/varsity-22.jpg" alt="Varsity 22" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="20"><img src="images/gallery/varsity-23.jpg" alt="Varsity 23" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="21"><img src="images/gallery/varsity-24.jpg" alt="Varsity 24" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="22"><img src="images/gallery/varsity-25.jpg" alt="Varsity 25" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="23"><img src="images/gallery/varsity-26.jpg" alt="Varsity 26" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="24"><img src="images/gallery/varsity-27.jpg" alt="Varsity 27" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="25"><img src="images/gallery/varsity-28.jpg" alt="Varsity 28" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="26"><img src="images/gallery/varsity-29.jpg" alt="Varsity 29" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="27"><img src="images/gallery/varsity-30.jpg" alt="Varsity 30" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="28"><img src="images/gallery/varsity-31.jpg" alt="Varsity 31" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="29"><img src="images/gallery/varsity-32.jpg" alt="Varsity 32" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="30"><img src="images/gallery/varsity-33.jpg" alt="Varsity 33" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="31"><img src="images/gallery/varsity-34.jpg" alt="Varsity 34" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="32"><img src="images/gallery/varsity-35.jpg" alt="Varsity 35" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="33"><img src="images/gallery/varsity-36.jpg" alt="Varsity 36" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="34"><img src="images/gallery/varsity-37.jpg" alt="Varsity 37" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="35"><img src="images/gallery/varsity-38.jpg" alt="Varsity 38" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="36"><img src="images/gallery/varsity-39.jpg" alt="Varsity 39" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="37"><img src="images/gallery/varsity-40.jpg" alt="Varsity 40" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="38"><img src="images/gallery/varsity-41.jpg" alt="Varsity 41" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="39"><img src="images/gallery/varsity-42.jpg" alt="Varsity 42" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="40"><img src="images/gallery/varsity-43.jpg" alt="Varsity 43" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="41"><img src="images/gallery/varsity-44.jpg" alt="Varsity 44" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="42"><img src="images/gallery/varsity-45.jpg" alt="Varsity 45" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="43"><img src="images/gallery/varsity-46.jpg" alt="Varsity 46" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="44"><img src="images/gallery/varsity-47.jpg" alt="Varsity 47" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="45"><img src="images/gallery/varsity-48.jpg" alt="Varsity 48" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="46"><img src="images/gallery/varsity-49.jpg" alt="Varsity 49" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="47"><img src="images/gallery/varsity-50.jpg" alt="Varsity 50" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="48"><img src="images/gallery/varsity-51.jpg" alt="Varsity 51" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="49"><img src="images/gallery/varsity-52.jpg" alt="Varsity 52" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="50"><img src="images/gallery/varsity-53.jpg" alt="Varsity 53" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="51"><img src="images/gallery/varsity-54.jpg" alt="Varsity 54" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="52"><img src="images/gallery/varsity-55.jpg" alt="Varsity 55" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="53"><img src="images/gallery/varsity-56.jpg" alt="Varsity 56" loading="lazy"></div>
+        <div class="photo-masonry-item" data-gallery="varsity" data-index="54"><img src="images/gallery/varsity-57.jpg" alt="Varsity 57" loading="lazy"></div>
+      </div>
+      <div class="gallery-show-more" id="varsity-show-more">
+        <button type="button" data-target="varsity-grid">Show all 55 photos</button>
       </div>
     </div>
   </section>
@@ -204,7 +231,7 @@
       <div class="section-head">
         <div><h2>Alumni Dinner</h2></div>
       </div>
-      <div class="photo-masonry" id="alumni-grid">
+      <div class="photo-masonry is-collapsed" id="alumni-grid">
         <div class="photo-masonry-item" data-gallery="alumni" data-index="0"><img src="images/gallery/alumnidinner-1.jpg" alt="Alumni Dinner 1" loading="lazy"></div>
         <div class="photo-masonry-item" data-gallery="alumni" data-index="1"><img src="images/gallery/alumnidinner-2.jpg" alt="Alumni Dinner 2" loading="lazy"></div>
         <div class="photo-masonry-item" data-gallery="alumni" data-index="2"><img src="images/gallery/alumnidinner-3.jpg" alt="Alumni Dinner 3" loading="lazy"></div>
@@ -222,6 +249,9 @@
         <div class="photo-masonry-item" data-gallery="alumni" data-index="14"><img src="images/gallery/alumnidinner-15.jpg" alt="Alumni Dinner 15" loading="lazy"></div>
         <div class="photo-masonry-item" data-gallery="alumni" data-index="15"><img src="images/gallery/alumnidinner-16.jpg" alt="Alumni Dinner 16" loading="lazy"></div>
         <div class="photo-masonry-item" data-gallery="alumni" data-index="16"><img src="images/gallery/alumnidinner-17.jpg" alt="Alumni Dinner 17" loading="lazy"></div>
+      </div>
+      <div class="gallery-show-more" id="alumni-show-more">
+        <button type="button" data-target="alumni-grid">Show all 17 photos</button>
       </div>
     </div>
   </section>
@@ -343,6 +373,15 @@
 
   lightbox.addEventListener('click', e => {
     if (e.target === lightbox) { lightbox.classList.remove('is-open'); document.body.style.overflow = ''; }
+  });
+
+  // Show more / expand galleries
+  document.querySelectorAll('.gallery-show-more button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const grid = document.getElementById(btn.dataset.target);
+      grid.classList.remove('is-collapsed');
+      btn.closest('.gallery-show-more').classList.add('is-hidden');
+    });
   });
 </script>
 </body>
