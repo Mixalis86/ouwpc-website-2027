@@ -8,6 +8,48 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  .fixtures-filter {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+  }
+  .filter-btn {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: var(--white);
+    color: var(--ink);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .filter-btn.is-active { background: var(--accent); color: var(--white); border-color: var(--accent); }
+
+  .fixture-row { transition: opacity 0.2s; }
+  .fixture-row.is-hidden { display: none; }
+
+  .show-more-wrap { text-align: center; margin-top: 1.2rem; }
+  .show-more-btn {
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.65rem 1.4rem;
+    border: 2px solid var(--oxford-blue);
+    border-radius: var(--radius);
+    background: none;
+    color: var(--oxford-blue);
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+  }
+  .show-more-btn:hover { background: var(--oxford-blue); color: var(--white); }
+</style>
 </head>
 <body>
 
@@ -43,15 +85,54 @@
     </div>
   </section>
 
+  <!-- UPCOMING FIXTURES -->
   <section>
     <div class="container">
       <div class="section-head"><div><h2>Upcoming fixtures</h2></div></div>
-      <div class="card" style="padding:2rem; text-align:center;">
-        <p style="font-size:1.05rem; color:var(--pool-teal);">Fixtures for this term are still being confirmed — check back soon.</p>
+
+      <div class="fixtures-filter">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="M1">M1</button>
+        <button class="filter-btn" data-filter="W1">W1</button>
+        <button class="filter-btn" data-filter="M2">M2</button>
+      </div>
+
+      <div class="card" style="padding:0; overflow:auto;">
+        <table class="data-table" id="fixtures-table">
+          <thead>
+            <tr><th>Date</th><th>Squad</th><th>Opponent</th></tr>
+          </thead>
+          <tbody>
+            <!-- shown by default (first 6) -->
+            <tr class="fixture-row" data-squad="M1"><td>21/10</td><td>M1</td><td>Bristol</td></tr>
+            <tr class="fixture-row" data-squad="W1"><td>21/10</td><td>W1</td><td>Bath</td></tr>
+            <tr class="fixture-row" data-squad="M1"><td>28/10</td><td>M1</td><td>Exeter</td></tr>
+            <tr class="fixture-row" data-squad="W1"><td>28/10</td><td>W1</td><td>Birmingham</td></tr>
+            <tr class="fixture-row" data-squad="M1"><td>04/11</td><td>M1</td><td>Bath</td></tr>
+            <tr class="fixture-row" data-squad="W1"><td>07/11</td><td>W1</td><td>Bristol</td></tr>
+            <!-- hidden initially -->
+            <tr class="fixture-row extra" data-squad="M2"><td>07/11</td><td>M2</td><td>Leicester</td></tr>
+            <tr class="fixture-row extra" data-squad="W1"><td>11/11</td><td>W1</td><td>Cardiff</td></tr>
+            <tr class="fixture-row extra" data-squad="M1"><td>18/11</td><td>M1</td><td>Cardiff</td></tr>
+            <tr class="fixture-row extra" data-squad="W1"><td>18/11</td><td>W1</td><td>Exeter</td></tr>
+            <tr class="fixture-row extra" data-squad="M2"><td>18/11</td><td>M2</td><td>Oxford Brookes</td></tr>
+            <tr class="fixture-row extra" data-squad="W1"><td>21/11</td><td>W1</td><td>Cardiff</td></tr>
+            <tr class="fixture-row extra" data-squad="W1"><td>25/11</td><td>W1</td><td>Bath</td></tr>
+            <tr class="fixture-row extra" data-squad="M1"><td>28/11</td><td>M1</td><td>Bristol</td></tr>
+            <tr class="fixture-row extra" data-squad="W1"><td>28/11</td><td>W1</td><td>Bristol</td></tr>
+            <tr class="fixture-row extra" data-squad="M2"><td>28/11</td><td>M2</td><td>Cambridge 2s</td></tr>
+            <tr class="fixture-row extra" data-squad="M1"><td>02/12</td><td>M1</td><td>Exeter</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="show-more-wrap">
+        <button class="show-more-btn" id="show-more-btn">Show all fixtures</button>
       </div>
     </div>
   </section>
 
+  <!-- RECENT RESULTS -->
   <section class="section-tinted">
     <div class="container">
       <div class="section-head"><div><h2>Recent results</h2></div></div>
@@ -59,13 +140,13 @@
         <table class="data-table">
           <thead><tr><th>Date</th><th>Squad</th><th>Opponent</th><th>Score</th><th>Result</th></tr></thead>
           <tbody>
-            <tr><td>–</td><td>M2</td><td>UEA</td><td>11 : 23</td><td><span class="tag tag-win">Loss</span></td></tr>
-            <tr><td>–</td><td>W1</td><td>Exeter</td><td>25 : 0</td><td><span class="tag tag-win">Win</span></td></tr>
-            <tr><td>–</td><td>M1</td><td>Cardiff</td><td>12 : 18</td><td><span class="tag tag-loss">Loss</span></td></tr>
             <tr><td>28/02</td><td>W1</td><td>Cambridge</td><td>12 : 3</td><td><span class="tag tag-win">Win</span></td></tr>
-            <tr><td>28/02</td><td>M1</td><td>Cambridge</td><td>16 : 15 (5-4 in penalties)</td><td><span class="tag tag-win">Win</span></td></tr>
+            <tr><td>28/02</td><td>M1</td><td>Cambridge</td><td>16 : 15 (5-4 pen.)</td><td><span class="tag tag-win">Win</span></td></tr>
             <tr><td>28/02</td><td>W2</td><td>Cambridge</td><td>6 : 7</td><td><span class="tag tag-loss">Loss</span></td></tr>
             <tr><td>28/02</td><td>M2</td><td>Cambridge</td><td>3 : 15</td><td><span class="tag tag-loss">Loss</span></td></tr>
+            <tr><td>–</td><td>M1</td><td>Cardiff</td><td>12 : 18</td><td><span class="tag tag-loss">Loss</span></td></tr>
+            <tr><td>–</td><td>W1</td><td>Exeter</td><td>25 : 0</td><td><span class="tag tag-win">Win</span></td></tr>
+            <tr><td>–</td><td>M2</td><td>UEA</td><td>23 : 11</td><td><span class="tag tag-win">Win</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -92,11 +173,6 @@
         </div>
         <div>
           <h4>Sponsors</h4>
-          <!--
-            Add a sponsor logo at images/sponsors/sponsor-1.png and point
-            the href below at their website. Add more sponsors by copying
-            this whole <a> block.
-          -->
           <a href="https://pinewood.ai/" target="_blank" rel="noopener" class="footer-sponsor-link">
             <img src="images/sponsors/sponsor-1.png" alt="Sponsor"
                  onerror="this.outerHTML='&lt;span class=&quot;affiliate-fallback&quot; style=&quot;color:var(--white);border-color:rgba(255,255,255,.3);&quot;&gt;Add sponsor logo&lt;/span&gt;'">
@@ -121,5 +197,47 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+  // Show more / show less
+  const extraRows = document.querySelectorAll('.fixture-row.extra');
+  const btn = document.getElementById('show-more-btn');
+  let expanded = false;
+
+  // Hide extras initially
+  extraRows.forEach(r => r.classList.add('is-hidden'));
+
+  btn.addEventListener('click', () => {
+    expanded = !expanded;
+    extraRows.forEach(r => {
+      r.classList.toggle('is-hidden', !expanded);
+    });
+    btn.textContent = expanded ? 'Show fewer fixtures' : 'Show all fixtures';
+    // Re-apply any active filter
+    applyFilter(document.querySelector('.filter-btn.is-active').dataset.filter);
+  });
+
+  // Filter by squad
+  function applyFilter(squad) {
+    document.querySelectorAll('.fixture-row').forEach(row => {
+      const matchesFilter = squad === 'all' || row.dataset.squad === squad;
+      const isExtra = row.classList.contains('extra');
+      if (!matchesFilter) {
+        row.classList.add('is-hidden');
+      } else if (isExtra && !expanded) {
+        row.classList.add('is-hidden');
+      } else {
+        row.classList.remove('is-hidden');
+      }
+    });
+  }
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      applyFilter(btn.dataset.filter);
+    });
+  });
+</script>
 </body>
 </html>
