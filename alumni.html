@@ -20,6 +20,15 @@
     .events-list .event-name { font-family: var(--font-display); font-size: 1rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--oxford-blue); }
     .events-list .event-detail { font-size: 0.87rem; color: #3a4754; margin-top: 0.2rem; }
 
+    /* Featured event (text + poster) */
+    .event-feature { display: flex; gap: 1.6rem; align-items: flex-start; flex-wrap: wrap; }
+    .event-feature-text { flex: 1 1 320px; }
+    .event-feature-text p { margin: 0.7rem 0 0; font-size: 0.92rem; color: #3a4754; }
+    .event-feature-text .event-cta { margin-top: 1rem; }
+    .event-feature-img { flex: 0 1 280px; }
+    .event-feature-img a { display: block; }
+    .event-feature-img img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 6px 20px rgba(0,33,71,0.15); }
+
     .dinner-slideshow { aspect-ratio: 16/7; }
 
     .ouswpa-intro { font-size: 1.08rem; line-height: 1.78; color: var(--oxford-blue); font-style: italic; border-left: 4px solid var(--accent); padding-left: 1.4rem; max-width: 72ch; }
@@ -212,14 +221,32 @@
     <div class="container">
       <div class="section-head"><div><h2>Upcoming Events</h2></div></div>
       <ul class="events-list">
+
         <li>
-          <div class="event-name">December Drinks 2026</div>
-          <div class="event-detail">London — date TBC</div>
+          <div class="event-feature">
+            <div class="event-feature-text">
+              <div class="event-name">🎄 OUSWPA London Christmas Drinks 🎄</div>
+              <div class="event-detail">Tuesday 15 December · 6–8pm · O'Neill's Carnaby Street, 37–38 Great Marlborough St, W1F 7JF</div>
+              <p>We're bringing back the OUSWPA London Christmas Drinks. A drink on us for the first 6 arrivals!</p>
+              <p>Take a stroll along the newly pedestrianised Oxford Street, see the Liberty and Carnaby Lights, and maybe grab a bite at Chinatown afterwards — but be sure to join us for a festive drink or two!</p>
+              <p>If you're coming from Oxford it is definitely achievable to do a day trip. I'll be taking the train to Paddington, Lizzie line to Bond Street, and then walking in — tick coming from Oxford and we can co-ordinate trains!</p>
+              <p class="event-cta"><a href="https://forms.cloud.microsoft/r/MaUbWHGm0z" target="_blank" rel="noopener" class="btn btn-primary">Let us know you're coming</a></p>
+            </div>
+            <div class="event-feature-img">
+              <a href="images/ouswpa-christmas-drinks.png" target="_blank" rel="noopener">
+                <img src="images/ouswpa-christmas-drinks.png"
+                     alt="OUSWPA London Christmas Drinks poster: Tuesday 15 December, 6–8pm, O'Neill's Carnaby Street, 37–38 Great Marlborough St, W1F 7JF. A drink on us for the first 6 arrivals."
+                     loading="lazy">
+              </a>
+            </div>
+          </div>
         </li>
+
         <li>
-          <div class="event-name">Alumni Varsity Match 2027</div>
-          <div class="event-detail">Cambridge — date TBC</div>
+          <div class="event-name">Alumni Varsity Match 2027 — The 136th Annual Varsity</div>
+          <div class="event-detail">Away at Cambridge — Saturday 6 March. The Varsity swim is the week before, on Saturday 27 February. See the <a href="fixtures.html#varsity" style="text-decoration:underline;">fixtures page</a> for more.</div>
         </li>
+
         <li>
           <div class="event-name">Alumni Dinner 2027</div>
           <div class="event-detail">Oxford — date TBC</div>
