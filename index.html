@@ -28,6 +28,16 @@
     .announcement-list li { border-left: 3px solid var(--accent); padding: 0.7rem 1rem; background: rgba(255,255,255,0.05); border-radius: 0 var(--radius) var(--radius) 0; font-size: 0.97rem; }
     .announcement-list a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
     .announcement-list a:hover { color: var(--accent-hover); }
+    .announcement-list li p { margin: 0 0 0.7rem; }
+    .announcement-list li p:last-child { margin-bottom: 0; }
+    .announcement-title { font-family: var(--font-display); font-size: 1.05rem; letter-spacing: .04em; text-transform: uppercase; color: var(--white); margin: 0 0 0.6rem !important; }
+
+    /* Event poster inside an announcement */
+    .announcement-event { display: flex; gap: 1.4rem; align-items: flex-start; flex-wrap: wrap; }
+    .announcement-event-text { flex: 1 1 340px; }
+    .announcement-event-img { flex: 0 1 300px; }
+    .announcement-event-img a { display: block; text-decoration: none; }
+    .announcement-event-img img { width: 100%; height: auto; border-radius: var(--radius); }
 
     /* Pre-season timetable inside an announcement */
     .timetable-figure { margin: 1rem 0 0; }
@@ -136,7 +146,33 @@
     <div class="container">
       <h2 style="margin-bottom:1.4rem;">Announcements</h2>
       <ul class="announcement-list">
+
         <li>There is one week left of taster sessions and trials — if you're interested in joining the club, now is the time to come down and give it a go! See the <a href="squads.html">Squads</a> page for training times, or <a href="join.html">get in touch</a> if you have any questions.</li>
+
+        <li>
+          <div class="announcement-event">
+            <div class="announcement-event-text">
+              <p class="announcement-title">🎄🏊 OUSWPA London Christmas Drinks 🤽🎄</p>
+              <p>We're bringing back the OUSWPA London Christmas Drinks. Join us on <strong>Tuesday 15 December, 6–8pm</strong> at <strong>O'Neill's Carnaby Street</strong> (37–38 Great Marlborough St, W1F 7JF).</p>
+              <p>Take a stroll along the newly pedestrianised Oxford Street, see the Liberty and Carnaby Lights, and maybe grab a bite at Chinatown afterwards — but be sure to join us for a festive drink or two!</p>
+              <p>If you're coming from Oxford it is definitely achievable to do a day trip. I'll be taking the train to Paddington, Lizzie line to Bond Street, and then walking in — tick coming from Oxford and we can co-ordinate trains!</p>
+              <p>Please let us know if you're coming! <a href="https://forms.cloud.microsoft/r/MaUbWHGm0z" target="_blank" rel="noopener">RSVP here</a>. Find out more on the <a href="alumni.html">OUSWPA page</a>.</p>
+            </div>
+            <div class="announcement-event-img">
+              <a href="images/events/ouswpa-christmas-drinks.png" target="_blank" rel="noopener">
+                <img src="images/events/ouswpa-christmas-drinks.png"
+                     alt="OUSWPA London Christmas Drinks poster: Tuesday 15 December, 6–8pm, O'Neill's Carnaby Street, 37–38 Great Marlborough St, W1F 7JF. A drink on us for the first 6 arrivals."
+                     loading="lazy">
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <p class="announcement-title">🏆 The 136th Annual Varsity Match</p>
+          <p>The 136th annual Varsity match against Cambridge takes place <strong>away at Cambridge on Saturday 6 March</strong>. The Varsity swim is the week before, on <strong>Saturday 27 February</strong>. More details to follow — see the <a href="fixtures.html#varsity">fixtures page</a>.</p>
+        </li>
+
       </ul>
     </div>
   </section>
